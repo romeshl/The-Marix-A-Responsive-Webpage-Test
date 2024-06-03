@@ -18,15 +18,14 @@ export default function Nav() {
         setNav(!nav);
     }
 
-    console.log(window.innerWidth)
     return (
 
-        <div className="flex justify-between items-center border-[1px] border-green-950  p-6  bg-black font-bold uppercase w-[85%] max-w-[1200px] mx-auto h-[100px]  text-green-500">
-            <div className="flex items-center gap-2  text-green-500">
-                <PiMatrixLogoFill size={40} />
-                <h1 className="text-3xl ">This is a test</h1>
+        <div className="relative z-10 font-mono select-none flex justify-between items-center uppercase  p-6  max-w-[1200px] mx-auto h-[100px]  text-green-500">
+            <div className="flex items-center gap-2  text-green-400">
+
+                <h1 className="font-Matrix text-4xl [text-shadow:_3px_1px_0_rgb(0_255_0_/_30%)] pl-5">The Matrix</h1>
             </div>
-            
+
             <ul className="hidden md:flex justify-evenly items-center h-[90px] gap-[20px] cursor-pointer text-gray-300">
                 <li className="text-center ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">Home</li>
                 <li className="text-center ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">About</li>
@@ -35,10 +34,10 @@ export default function Nav() {
                      bg-black border-green-300 cursor-pointer hover:text-black hover:text-lg hover:border-green-300 hover:bg-green-500">Login</li>
             </ul >
             <div className="block cursor-pointer md:hidden" onClick={toggleMenu}>
-                {!nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={20}/>}
+                {!nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={20} />}
             </div>
-            <div className={nav ? "absolute z-10 top-[95px] right-[7.5%] ease-in-out duration-300 bg-black  uppercase font-bold rounded-xl opacity-80 border-2 border-green-950"
-                : "absolute right-[-200px] top-[-100px] ease-in-out duration-300 border-2 border-green-950"}>
+            <div className={nav ? "absolute z-10 top-[65px] right-0 ease-in-out duration-300 bg-black  uppercase rounded-xl opacity-70 border-2 border-green-950"
+                : "absolute right-[-200px] top-[-500px] ease-in-out duration-300 border-2  border-green-950"}>
                 <ul className="flex flex-col  justify-center items-center px-5 py-3 cursor-pointer  text-gray-300"  >
                     <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">Home</li>
                     <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">About</li>
