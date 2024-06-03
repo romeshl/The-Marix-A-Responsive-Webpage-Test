@@ -37,7 +37,7 @@ export default function Nav() {
                 {!nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={20} />}
             </div>
             <div className={nav ? "absolute z-10 top-[65px] right-0 ease-in-out duration-300 bg-black  uppercase rounded-xl opacity-70 border-2 border-green-950"
-                : "absolute right-[-200px] top-[-500px] ease-in-out duration-300 border-2  border-green-950"}>
+                : "absolute right-0 top-[-500px] ease-in-out duration-300 border-2  border-green-950"}>
                 <ul className="flex flex-col  justify-center items-center px-5 py-3 cursor-pointer  text-gray-300"  >
                     <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">Home</li>
                     <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">About</li>
