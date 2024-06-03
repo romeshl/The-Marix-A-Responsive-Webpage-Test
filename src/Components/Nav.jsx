@@ -20,13 +20,13 @@ export default function Nav() {
 
     return (
 
-        <div className="relative z-10 font-mono select-none flex justify-between items-center uppercase  p-6  max-w-[1200px] mx-auto h-[100px]  text-green-500">
+        <div className="relative z-10 select-none flex justify-between items-center uppercase  p-6  max-w-[1200px] mx-auto h-[100px]  text-green-500">
             <div className="flex items-center gap-2  text-green-400">
 
-                <h1 className="font-Matrix text-4xl [text-shadow:_3px_1px_0_rgb(0_255_0_/_30%)] pl-5">The Matrix</h1>
+                <h1 className="font-serif text-4xl [text-shadow:_3px_1px_0_rgb(0_255_0_/_30%)] pl-5">The Matrix</h1>
             </div>
 
-            <ul className="hidden md:flex justify-evenly items-center h-[90px] gap-[20px] cursor-pointer text-gray-300">
+            <ul className="font-mono font-bold hidden md:flex justify-evenly items-center h-[90px] gap-[20px] cursor-pointer text-gray-300">
                 <li className="text-center ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">Home</li>
                 <li className="text-center ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">About</li>
                 <li className="text-center ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">Contact</li>
@@ -38,7 +38,7 @@ export default function Nav() {
             </div>
             <div className={nav ? "absolute z-10 top-[65px] right-0 ease-in-out duration-300 bg-black  uppercase rounded-xl opacity-70 border-2 border-green-950"
                 : "absolute right-0 top-[-500px] ease-in-out duration-300 border-2  border-green-950"}>
-                <ul className="flex flex-col  justify-center items-center px-5 py-3 cursor-pointer  text-gray-300"  >
+                <ul className="font-mono font-bold flex flex-col  justify-center items-center px-5 py-3 cursor-pointer  text-gray-300"  >
                     <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">Home</li>
                     <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">About</li>
                     <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950  hover:text-lg hover:text-green-300">Contact</li>
