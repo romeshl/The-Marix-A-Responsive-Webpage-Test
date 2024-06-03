@@ -47,11 +47,25 @@ export default function Hero() {
         `“I have imagined this moment for a long time. Is it real?”`,
     ];
 
-        
+    const handleEnter = (e) => {
+        e.preventDefault();
+        console.log("Enter pressed");
+    }
     return (
-        <div className="font-mono mt-[90px] relative z-9 text-center w-[80%] mx-auto text-green-200 uppercase text-4xl font-Matrix [text-shadow:_4px_2px_0_rgb(0_255_0_/_30%)]">
+        <div className="font-mono mt-[20px] relative z-9 w-[90%] mx-auto text-green-200 uppercase [text-shadow:_4px_2px_0_rgb(0_255_0_/_30%)]
+         lg:flex lg:justify-between lg:mt-[50px]">
+            <div className="flex items-center h-40 text-2xl text-center 
+            md:text-3xl
+            lg:text-4xl lg:text-left lg:w-[70%]" >
             <ReactTyped strings={MatrixQuotes}
-                typeSpeed={50} shuffle={true} backSpeed={30} backDelay={5000} loop />
+                    typeSpeed={60} shuffle={true} backSpeed={30} backDelay={5000} loop className="py-auto"/>
+            </div>
+            <form className="flex justify-center  gap-2 
+            lg:flex-col lg:w-[25%]">
+                <input type="text" placeholder="Search The Matrix" className=" text-center border border-green-500 bg-gray-200" />
+                <button type="submit" onClick={handleEnter} className="border border-green-800 rounded-md px-10 py-1
+                 hover:bg-green-500 hover:text-black uppercase">Enter</button>
+            </form>
         </div>
     )
 
