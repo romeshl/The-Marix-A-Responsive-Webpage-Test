@@ -3,6 +3,7 @@ import Nav from './Components/Nav';
 import Matrix from "/Matrix_1.mp4";
 import Hero from "./Components/Hero";
 import Gallery from "./Components/Gallery";
+import Footer from "./Components/Footer";
 
 import './App.css'
 
@@ -23,6 +24,7 @@ function App() {
       
     </div>
       <Gallery />
+      <Footer/>
     </>
   )
 }

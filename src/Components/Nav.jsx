@@ -27,11 +27,15 @@ export default function Nav() {
             </div>
 
             <ul className="font-mono font-bold hidden md:flex justify-evenly items-center h-[90px] gap-[20px] cursor-pointer text-gray-300">
-                <li className="text-center ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">Home</li>
-                <li className="text-center ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">About</li>
-                <li className="text-center ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">Contact</li>
+                <li className="text-center ease-in-out duration-200 border-green-950 
+                hover:scale-105 hover:text-green-300">Home</li>
+                <li className="text-center ease-in-out duration-200 border-green-950 
+                hover:scale-105 hover:text-green-300">About</li>
+                <li className="text-center ease-in-out duration-200 border-green-950 
+                hover:scale-105 hover:text-green-300">Contact</li>
                 <li className="text-center py-3 w-[90px] rounded-xl ease-in-out duration-200 border
-                     bg-black border-green-300 cursor-pointer hover:text-black hover:text-lg hover:border-green-300 hover:bg-green-500">Login</li>
+                     bg-black border-green-300 cursor-pointer
+                      hover:text-black hover:scale-105 hover:border-green-300 hover:bg-green-500">Login</li>
             </ul >
             <div className="block cursor-pointer md:hidden" onClick={toggleMenu}>
                 {!nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={20} />}
@@ -39,11 +43,15 @@ export default function Nav() {
             <div className={nav ? "absolute z-10 top-[65px] right-0 ease-in-out duration-300 bg-black  uppercase rounded-xl opacity-70 border-2 border-green-950"
                 : "absolute right-0 top-[-500px] ease-in-out duration-300 border-2  border-green-950"}>
                 <ul className="font-mono font-bold flex flex-col  justify-center items-center px-5 py-3 cursor-pointer  text-gray-300"  >
-                    <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">Home</li>
-                    <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950 hover:text-lg hover:text-green-300">About</li>
-                    <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950  hover:text-lg hover:text-green-300">Contact</li>
+                    <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950 
+                    hover:scale-105 hover:text-green-300">Home</li>
+                    <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950 
+                    hover:scale-105 hover:text-green-300">About</li>
+                    <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950 
+                    hover:scale-105 hover:text-green-300">Contact</li>
                     <li className="text-center py-3 w-[90px] border rounded-lg ease-in-out duration-200 mt-2
-                     bg-black border-green-300 cursor-pointer hover:text-black hover:text-lg hover:border-green-300 hover:bg-green-500">Login</li>
+                     bg-black border-green-300 cursor-pointer
+                     hover:text-black hover:scale-105 hover:border-green-300 hover:bg-green-500">Login</li>
                 </ul >
             </div>
         </div>
