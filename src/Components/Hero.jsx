@@ -78,8 +78,8 @@ export default function Hero() {
             </div>
             <form className="flex justify-center  gap-2 
             lg:flex-col lg:w-[25%] lg:items-center">
-                    <input type="text" placeholder="Search The Matrix" className="w-[40%] text-center border border-green-500 bg-gray-200
-                lg:w-[80%] text-gray-950" onChange={handleChange} required={true} />
+                    <input type="text" value={InputText} placeholder="Search The Matrix" className="w-[40%] text-center border border-green-500 bg-gray-200
+                lg:w-[80%] text-gray-950 selection:bg-green-300"onChange={handleChange} onFocus={(e)=> {e.target.select()}} required={true} />
                 <button type="submit" onClick={handleEnter} className="w-[40%] border border-green-800 rounded-md px-10 py-1
                 lg:w-[80%]
                  hover:bg-green-500 hover:text-black uppercase" >Enter</button>

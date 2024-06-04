@@ -63,8 +63,8 @@ export default function Gallery() {
     ]
 
     return (
-        <div className="select-none w-[85%] max-w-[1200px] pt-2 m-auto mt-[30px] h-[420px] 
-        [scrollbar-color:rgb(50_255_0_/10%)_rgb(3_7_18_/90%)] overflow-auto flex flex-wrap justify-center gap-3 shadow-2xl">
+        <div className="select-none w-[85%] max-w-[1200px] px-4 pt-2 m-auto mt-[30px] h-[420px] 
+        [scrollbar-color:rgb(50_255_0_/10%)_rgb(3_7_18_/90%)] overflow-auto flex flex-wrap justify-between gap-3 shadow-2xl">
             { PhotoGallery.map((photo, index) => (
                 <PhotoCard key={index} image={photo.image} title={photo.title} description={photo.description} />
             )) }
