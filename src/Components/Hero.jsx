@@ -3,7 +3,7 @@ import { ReactTyped } from "react-typed";
 
 
 export default function Hero() {
-    
+
     // Quotes to be displayed in the hero section
     const MatrixQuotes = [
         `“Ever have that feeling where you’re not sure if you’re awake or dreaming?”`,
@@ -57,8 +57,8 @@ export default function Hero() {
             <div className="flex items-center h-40 text-2xl text-center 
             md:text-3xl
             lg:text-4xl lg:text-left lg:w-[70%]" >
-            <ReactTyped strings={MatrixQuotes}
-                    typeSpeed={60} shuffle={true} backSpeed={30} backDelay={5000} loop className="py-auto"/>
+                <ReactTyped strings={MatrixQuotes}
+                    typeSpeed={60} shuffle={true} backSpeed={30} backDelay={5000} loop className="py-auto" />
             </div>
             <form className="flex justify-center  gap-2 
             lg:flex-col lg:w-[25%]">

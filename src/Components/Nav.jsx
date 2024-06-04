@@ -37,10 +37,11 @@ export default function Nav() {
                      bg-black border-green-300 cursor-pointer
                       hover:text-black hover:scale-105 hover:border-green-300 hover:bg-green-500">Login</li>
             </ul >
-            <div className="block cursor-pointer md:hidden" onClick={toggleMenu}>
+            <div className="block cursor-pointer 
+            md:hidden" onClick={toggleMenu}>
                 {!nav ? <AiOutlineMenu size={20} /> : <AiOutlineClose size={20} />}
             </div>
-            <div className={nav ? "absolute z-10 top-[65px] right-0 ease-in-out duration-300 bg-black  uppercase rounded-xl opacity-70 border-2 border-green-950"
+            <div className={nav ? "absolute z-10 top-[65px] right-0 ease-in-out duration-300 bg-black  uppercase rounded-xl opacity-80 border-2 border-green-950"
                 : "absolute right-0 top-[-500px] ease-in-out duration-300 border-2  border-green-950"}>
                 <ul className="font-mono font-bold flex flex-col  justify-center items-center px-5 py-3 cursor-pointer  text-gray-300"  >
                     <li className="text-center py-3 w-[120px] border-b-[2px] ease-in-out duration-200 border-green-950 
