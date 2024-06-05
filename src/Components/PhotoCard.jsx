@@ -1,5 +1,6 @@
 
 
+// Photos and details get passed to this object to display in a specific format 
 export default function PhotoCard({ image, title, description, clicked}) {
 
     return (

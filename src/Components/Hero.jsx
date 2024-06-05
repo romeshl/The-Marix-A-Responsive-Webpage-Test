@@ -5,7 +5,10 @@ import Overlay from "./Overlay";
 
 export default function Hero() {
 
+    // holds the 'search' input value 
     const [InputText, setInputText] = useState("");
+
+    // this variable starts and end overlay which is used as a messagebox
     const [startOverlay, setStartOverlay] = useState(false);
 
 
@@ -52,14 +55,17 @@ export default function Hero() {
         `“I have imagined this moment for a long time. Is it real?”`,
     ];
 
+    // shows and hides overlay
     const ToggleOverlay = () => {
         setStartOverlay(!startOverlay);
     }
 
+    // update the InputText variable as the 'search' input changes
     const handleChange = (e) => {
         setInputText(e.target.value);
     }
 
+    // displays the overlay 'messagebox' when the 'Enter' button is pressed
     const handleEnter = (e) => {
         e.preventDefault();
         ToggleOverlay();
@@ -67,26 +73,31 @@ export default function Hero() {
 
     return (
         <>
-        <div className="relative z-10 font-mono mt-[20px] w-[90%] mx-auto text-green-200 uppercase [text-shadow:_4px_2px_0_rgb(0_255_0_/_30%)]
-         lg:flex lg:justify-between lg:mt-[50px]">
-            <div className="flex items-center h-40 text-xl text-center 
-            sm:2xl
-            md:text-3xl
-            lg:text-4xl lg:text-left lg:w-[70%]" >
-                <ReactTyped strings={MatrixQuotes}
-                    typeSpeed={60} shuffle={true} backSpeed={30} backDelay={5000} loop className="py-auto" />
-            </div>
-            <form className="flex justify-center  gap-2 
-            lg:flex-col lg:w-[25%] lg:items-center">
+            {/* This div holds items in the Hero section */}
+            <div className="relative z-10 font-mono mt-[20px] w-[90%] mx-auto text-green-200 uppercase [text-shadow:_4px_2px_0_rgb(0_255_0_/_30%)]
+                lg:flex lg:justify-between lg:mt-[50px]">
+                {/* this div hold the ReactTyped component */}
+                <div className="flex items-center h-40 text-xl text-center 
+                sm:2xl
+                md:text-3xl
+                lg:text-4xl lg:text-left lg:w-[70%]" >
+                    {/* Randomly selects and displays a quote from MatrixQuotes */}
+                    <ReactTyped strings={MatrixQuotes}
+                        typeSpeed={60} shuffle={true} backSpeed={30} backDelay={5000} loop className="py-auto" />
+                </div>
+                {/* This div holds search input box and enter button */}
+                <form className="flex justify-center  gap-2 
+                lg:flex-col lg:w-[25%] lg:items-center">
                     <input type="text" value={InputText} placeholder="Search The Matrix" className="w-[40%] text-center border border-green-500 bg-gray-200
-                lg:w-[80%] text-gray-950 selection:bg-green-300"onChange={handleChange} onFocus={(e)=> {e.target.select()}} required={true} />
-                <button type="submit" onClick={handleEnter} className="w-[40%] border border-green-800 rounded-md px-10 py-1
+                lg:w-[80%] text-gray-950 selection:bg-green-300"onChange={handleChange} onFocus={(e) => { e.target.select() }} required={true} />
+                    <button type="submit" onClick={handleEnter} className="w-[40%] border border-green-800 rounded-md px-10 py-1
                 lg:w-[80%]
                  hover:bg-green-500 hover:text-black uppercase" >Enter</button>
-            </form>
+                </form>
             </div>
-            <Overlay isOpen={startOverlay} onClose={ToggleOverlay} opacity={60}>
-                <h3 className="p-6 text-green-300 font-mono uppercase font-bold">You searched for : {InputText ? InputText: "Nothing."}</h3>
+            {/* Overlay displaying what's clicked */}
+            <Overlay isOpen={startOverlay} onClose={ToggleOverlay} opacity={70}>
+                <h3 className="p-6 text-green-300 font-mono uppercase font-bold">You searched for : {InputText ? InputText : "Nothing."}</h3>
             </Overlay>
         </>
     )

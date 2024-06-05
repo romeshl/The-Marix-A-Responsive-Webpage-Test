@@ -2,7 +2,7 @@
 // image for closing x symbol
 import { AiOutlineClose } from "react-icons/ai";
 
-// Overlay component to display Login/Signup and message box
+// Overlay component to display photos and to be used as a message box
 export default function Overlay({ isOpen, onClose, children, opacity = 100 }) {
     return (
         <>

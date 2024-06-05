@@ -2,13 +2,18 @@ import { useState } from "react";
 import Overlay from "./Overlay";
 
 export default function Footer() {
+    // state to control the overlay
     const [startOverlay, setStartOverlay] = useState(false);
+
+    // state to hold the innertext of the link clicked
     const [Clicked, setClicked] = useState("");
 
+    // turns on or off the overlay
     const ToggleOverlay = () => {
         setStartOverlay(!startOverlay);
     }
 
+    // handles the click of the links displays the overlay as a messagebox
     const HandleClick = (e) => {
         console.log(e.target.innerText)
         setClicked(e.target.innerText);
@@ -16,6 +21,8 @@ export default function Footer() {
         setNav(false);
 
     }
+
+    // holds the links to be mapped out in the footer section
     const Links = [
         {
             Title: "Links - A",
@@ -33,20 +40,24 @@ export default function Footer() {
 
     return (
         <>
+            { /* div holding all the elements in the footer */}
             <div className="select-none font-mono flex flex-wrap justify-evenly gap-[20px] w-[85%] max-w-[1200px] 
         m-auto mt-[30px] [background-color:rgb(3_7_18_/_70%)] border-[1px] border-green-950 px-10
         rounded-t-3xl py-[50px] uppercase">
+                {/* Maps links from the Links object */}
                 {Links.map((link, index) => {
                     return (
-                        <div className=" w-[60%] relative opacity-100 z-10
-                    md:w-[45%]
-                    lg:w-[30%]">
+                        <div className=" w-[60%] relative opacity-100 z-10 
+                             md:w-[45%]
+                             lg:w-[30%]">
+                            { /* this div holds the title of the links and the links in each object */}
                             <h3 className="text-green-200 font-bold text-lg text-center" key={index}>{link.Title}</h3>
                             <ul className="cursor-pointer text-center">
+                                { /* grabs links from the Links array of each object and displays in ul ad li */}
                                 {link.Links.map((url, i) => {
                                     return (
                                         <li className="text-green-300 py-2
-                                    hover:scale-105 hover:text-green-200" key={i} onClick={HandleClick}>
+                                                hover:scale-105 hover:text-green-200" key={i} onClick={HandleClick}>
                                             {url}
                                         </li>
                                     )
@@ -56,6 +67,7 @@ export default function Footer() {
                     )
                 })}
             </div>
+            {/* Overlay to display the messagebox of which link was clicked */}
             <Overlay isOpen={startOverlay} onClose={ToggleOverlay}>
                 <h3 className="p-6 text-green-300 font-mono uppercase font-bold">You clicked: {Clicked}</h3>
             </Overlay>
