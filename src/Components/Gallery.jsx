@@ -1,4 +1,9 @@
 import PhotoCard from "./PhotoCard";
+import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+
+
+import { useState } from "react";
+import Overlay from "./Overlay";
 
 import Matrix1 from "/gallery/Matrix-image1.jpg"
 import Matrix2 from "/gallery/Matrix-image2.jpg"
@@ -62,13 +67,50 @@ export default function Gallery() {
         },
     ]
 
+
+    const [startOverlay, setStartOverlay] = useState(false);
+    const [ClickedIndex, setClickedIndex] = useState(0);
+
+    const ToggleOverlay = () => {
+        setStartOverlay(!startOverlay);
+    }
+
+    const handleClick = (index) => {
+        setClickedIndex(index);
+        ToggleOverlay();
+    }
+
+    const ShowPhotosBack = () => { 
+        if (ClickedIndex >= 1) {
+            setClickedIndex(ClickedIndex - 1);
+        }
+    }
+
+    const ShowPhotosForward = () => {
+        if (ClickedIndex < PhotoGallery.length - 1 ) {
+            setClickedIndex(ClickedIndex + 1);
+        }
+    }
     return (
+        <>
         <div className="select-none w-[85%] max-w-[1200px] px-4 pt-2 m-auto mt-[30px] h-[420px] 
         [scrollbar-color:rgb(50_255_0_/10%)_rgb(3_7_18_/90%)] overflow-auto flex flex-wrap justify-between gap-3 shadow-2xl">
             { PhotoGallery.map((photo, index) => (
-                <PhotoCard key={index} image={photo.image} title={photo.title} description={photo.description} />
+                <PhotoCard  key={index} image={photo.image} title={photo.title} description={photo.description} clicked={()=>handleClick(index)} />
             )) }
         </div>
+            <Overlay isOpen={startOverlay} onClose={ToggleOverlay} >
+                <div className="flex mt-[40px] items-center justify-between select-none">
+                    <AiFillCaretLeft size={50} className="text-green-300 hover:text-green-500 cursor-pointer" onClick={ShowPhotosBack} />
+                    <img src={PhotoGallery[ClickedIndex].image} alt="" className="border-[1px] border-green-950 rounded-lg w-[85%]" />
+                    <AiFillCaretRight size={50} className="text-green-300  hover:text-green-500 cursor-pointer" onClick={ShowPhotosForward} />
+                </div>
+                <div className="flex flex-col items-center justify-center mt-[10px] font-mono">   
+                    <p className="text-lg font-bold text-green-300">{PhotoGallery[ClickedIndex].title}</p>
+                    <p className="text-green-300">{PhotoGallery[ClickedIndex].description}</p>
+                </div>
+            </Overlay>
+        </>
     )
 
 }

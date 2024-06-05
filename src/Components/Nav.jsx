@@ -76,7 +76,7 @@ export default function Nav() {
                         onClick={HandleClick}>Login</li>
                 </ul >
             </div>
-            <Overlay isOpen={startOverlay} onClose={ToggleOverlay}>
+            <Overlay isOpen={startOverlay} onClose={ToggleOverlay} opacity={60}>
                 <h3 className="p-6 text-green-300 font-mono uppercase font-bold">You clicked: {Clicked}</h3>
             </Overlay>
 

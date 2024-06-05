@@ -85,7 +85,7 @@ export default function Hero() {
                  hover:bg-green-500 hover:text-black uppercase" >Enter</button>
             </form>
             </div>
-            <Overlay isOpen={startOverlay} onClose={ToggleOverlay}>
+            <Overlay isOpen={startOverlay} onClose={ToggleOverlay} opacity={60}>
                 <h3 className="p-6 text-green-300 font-mono uppercase font-bold">You searched for : {InputText ? InputText: "Nothing."}</h3>
             </Overlay>
         </>
