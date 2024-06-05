@@ -1,5 +1,6 @@
 # The-Marix-A-Responsive-Webpage-Test
 
+## Intro
 I was supposed to create a responsive web page as the Mission - 0 of the ADVANCED FULL STACK DEVELOPER (CLOUD AND AI) course at Mission Ready HQ. 
 
 While looking for some tutorials I came across this tutorial (linked below) which shows how to create a responsive web page using React and Tailwind CSS. 
@@ -32,4 +33,28 @@ I also found way to sneak in regular CSS properties in TailWind CSS while lookin
 
 I was pretty proud that I was able to style the scrollbar in the Gallery section by following and playing with the syntax in above tutorial. 
 
-Deployed web page can be found at [The-Matrix-A-Responsive-Webpage-Test](https://romeshl.github.io/The-Marix-A-Responsive-Webpage-Test/)
+
+## Built with
+
+- [React Vite](https://vitejs.dev/)
+- [TailWind CSS](https://tailwindcss.com/)
+
+### Other packages
+- [React-icons](https://react-icons.github.io/react-icons/) 
+- [React-typed](https://www.npmjs.com/package/react-typed)
+
+## Instructions
+
+Use the following command to clone the repository. 
+
+```
+git clone https://github.com/romeshl/The-Marix-A-Responsive-Webpage-Test.git
+```
+and then the following command to install dependencies. 
+
+```
+npm install
+```
+
+## Deployed web page
+[The-Matrix-A-Responsive-Webpage-Test](https://romeshl.github.io/The-Marix-A-Responsive-Webpage-Test/)
