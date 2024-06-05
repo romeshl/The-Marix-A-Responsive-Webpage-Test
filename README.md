@@ -32,3 +32,4 @@ I also found way to sneak in regular CSS properties in TailWind CSS while lookin
 
 I was pretty proud that I was able to style the scrollbar in the Gallery section by following and playing with the syntax in above tutorial. 
 
+Deployed web page can be found at [The-Matrix-A-Responsive-Webpage-Test](https://romeshl.github.io/The-Marix-A-Responsive-Webpage-Test/)
