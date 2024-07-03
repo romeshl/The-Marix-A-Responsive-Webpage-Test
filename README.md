@@ -1,5 +1,8 @@
 # The-Marix-A-Responsive-Webpage-Test
 
+### Deployed web page
+[The-Matrix-A-Responsive-Webpage-Test](https://romeshl.github.io/The-Marix-A-Responsive-Webpage-Test/)
+
 ## Intro
 I was supposed to create a responsive web page as the Mission - 0 of the ADVANCED FULL STACK DEVELOPER (CLOUD AND AI) course at Mission Ready HQ. 
 
@@ -55,6 +58,3 @@ and then the following command to install dependencies.
 ```
 npm install
 ```
-
-## Deployed web page
-[The-Matrix-A-Responsive-Webpage-Test](https://romeshl.github.io/The-Marix-A-Responsive-Webpage-Test/)
